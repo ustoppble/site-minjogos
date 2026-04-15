@@ -15,6 +15,7 @@ const GAMES_CATALOG = [
   { id: 'memory', name: 'Jogo da Memoria', emoji: '🧠', category: 'puzzle', description: 'Encontre todos os pares de cartas iguais.' },
   { id: 'tic-tac-toe', name: 'Jogo da Velha', emoji: '❌', category: 'classico', description: 'X ou O? Venca o computador no jogo da velha.' },
   { id: 'space-invaders', name: 'Space Invaders', emoji: '👾', category: 'arcade', description: 'Defenda a Terra dos invasores espaciais.' },
+  { id: 'asteroids', name: 'Asteroids', emoji: '☄️', category: 'arcade', description: 'Destrua asteroides com sua nave e sobreviva o maximo possivel.' },
 ];
 
 const CATEGORIES = {
