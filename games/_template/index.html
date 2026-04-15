@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOME_DO_JOGO — Mini Jogos</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <a href="/" class="back-link">← Voltar aos jogos</a>
+
+    <div class="game-header">
+      <h1>NOME_DO_JOGO</h1>
+      <p>DESCRICAO_CURTA</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-score">Pontos: <span id="score">000000</span></div>
+
+      <div class="game-canvas-wrapper">
+        <canvas id="gameCanvas"></canvas>
+      </div>
+
+      <div class="game-controls">
+        <button class="btn btn-primary" id="startBtn">Iniciar</button>
+        <button class="btn btn-secondary" id="restartBtn">Reiniciar</button>
+      </div>
+
+      <div class="game-instructions">
+        <h3>Como jogar</h3>
+        <ul>
+          <li>INSTRUCAO_1</li>
+          <li>INSTRUCAO_2</li>
+          <li>INSTRUCAO_3</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

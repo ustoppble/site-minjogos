@@ -1,0 +1,18 @@
+/* ========================================
+   LAYOUT — Mini Jogos
+   Grid, containers, responsividade
+   ======================================== */
+
+.container { width: 100%; max-width: 1280px; margin: 0 auto; padding: 0 var(--space-4); }
+.main-content { padding-top: 64px; }
+
+.games-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
+@media (min-width: 640px) { .games-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6); } }
+@media (min-width: 1024px) { .games-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1280px) { .games-grid { grid-template-columns: repeat(4, 1fr); } }
+
+@media (min-width: 640px) { .container { padding: 0 var(--space-6); } }
+@media (min-width: 768px) { .container { padding: 0 var(--space-8); } }
+
+.game-page { min-height: 100vh; display: flex; flex-direction: column; }
+.game-page .main-content { flex: 1; }

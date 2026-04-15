@@ -1,0 +1,6 @@
+# Mini Jogos — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://minjogos.com/sitemap.xml

@@ -1,0 +1,30 @@
+{
+  "name": "Mini Jogos",
+  "short_name": "MiniJogos",
+  "description": "Colecao de mini jogos gratis no navegador. Snake, Tetris, Pong e mais — sem download, sem cadastro.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f0f23",
+  "theme_color": "#7c5cff",
+  "orientation": "any",
+  "categories": ["games", "entertainment"],
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/assets/icons/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
