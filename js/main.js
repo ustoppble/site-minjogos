@@ -5,7 +5,7 @@
 
 // --- Catalogo de Jogos ---
 const GAMES_CATALOG = [
-  { id: 'snake', name: 'Snake', emoji: '🐍', category: 'classico', description: 'Controle a cobra e coma as frutas sem bater nas paredes.' },
+  { id: 'snake', name: 'Snake', emoji: '🐍', category: 'classico', description: 'Controle a cobra e coma as frutas sem bater nas paredes.', article: 'artigos/snake.html' },
   { id: 'tetris', name: 'Tetris', emoji: '🧱', category: 'classico', description: 'Encaixe as pecas e complete linhas para pontuar.' },
   { id: 'pong', name: 'Pong', emoji: '🏓', category: 'classico', description: 'O classico jogo de ping-pong contra o computador.' },
   { id: 'breakout', name: 'Breakout', emoji: '🧱', category: 'classico', description: 'Destrua todos os blocos com a bola ricocheteando.' },
