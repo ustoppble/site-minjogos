@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campo Minado — Mini Jogos</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+  <nav class="nav">
+    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
+    <div class="nav-links"><a href="/">Início</a></div>
+  </nav>
+  <main class="main-content">
+    <a href="/" class="back-link">← Voltar aos jogos</a>
+    <div class="game-header">
+      <h1>Campo Minado 💣</h1>
+      <p>Encontre todas as minas sem explodir nenhuma.</p>
+    </div>
+    <div class="game-container">
+      <div class="game-score-row">
+        <div class="game-score">Minas: <span id="score">010</span></div>
+        <div class="game-highscore">Tempo: <span id="highscore">000</span>s</div>
+      </div>
+      <div class="game-canvas-wrapper">
+        <canvas id="gameCanvas" aria-label="Área do jogo Campo Minado"></canvas>
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <div class="overlay-emoji">💣</div>
+            <h2 id="overlayTitle">Campo Minado</h2>
+            <p id="overlayMsg">Clique para revelar, evite as minas!</p>
+            <button class="btn btn-primary btn-lg" id="overlayBtn">Iniciar</button>
+          </div>
+        </div>
+      </div>
+      <div class="game-controls">
+        <button class="btn btn-primary" id="startBtn">Iniciar</button>
+        <button class="btn btn-secondary" id="restartBtn">Reiniciar</button>
+      </div>
+      <div class="game-instructions">
+        <h3>Como jogar</h3>
+        <ul>
+          <li>Clique para revelar uma célula</li>
+          <li>Clique direito (ou toque longo no mobile) para marcar uma mina</li>
+          <li>Os números indicam quantas minas estão ao redor</li>
+          <li>Revele todas as células sem minas para vencer</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+  </footer>
+  <script src="../../js/main.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

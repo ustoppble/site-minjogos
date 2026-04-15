@@ -1,0 +1,76 @@
+/* ============================================
+   2048 — Estilos especificos do jogo
+   ============================================ */
+
+/* Linha de pontuacao com recorde */
+.game-score-row {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-highscore {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-muted);
+}
+
+.game-highscore span {
+  color: var(--color-warning);
+}
+
+/* Canvas wrapper com posicionamento para o overlay */
+.game-canvas-wrapper {
+  position: relative;
+}
+
+/* Overlay (tela inicial / game over) */
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(15, 15, 35, 0.88);
+  border-radius: var(--radius-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.game-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.overlay-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.overlay-content h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+}
+
+.overlay-content p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.btn-lg {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--font-size-base);
+}

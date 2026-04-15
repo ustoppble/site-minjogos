@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Memória — Mini Jogos</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <a href="/" class="back-link">← Voltar aos jogos</a>
+
+    <div class="game-header">
+      <h1>Jogo da Memória 🧠</h1>
+      <p>Encontre todos os pares de cartas iguais.</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-score-row">
+        <div class="game-score">Jogadas: <span id="score">000</span></div>
+        <div class="game-highscore">Pares: <span id="highscore">0/8</span></div>
+      </div>
+
+      <div class="game-canvas-wrapper">
+        <canvas id="gameCanvas" aria-label="Área do jogo da memória"></canvas>
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <div class="overlay-emoji">🧠</div>
+            <h2 id="overlayTitle">Jogo da Memória</h2>
+            <p id="overlayMsg">Encontre todos os pares!</p>
+            <button class="btn btn-primary btn-lg" id="overlayBtn">Iniciar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <button class="btn btn-primary" id="startBtn">Iniciar</button>
+        <button class="btn btn-secondary" id="restartBtn">Reiniciar</button>
+      </div>
+
+      <div class="game-instructions">
+        <h3>Como jogar</h3>
+        <ul>
+          <li>Clique em uma carta para virá-la</li>
+          <li>Encontre o par correspondente</li>
+          <li>Complete com o menor número de jogadas</li>
+          <li>Funciona com mouse e toque</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
