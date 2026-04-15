@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris — Mini Jogos</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+  <nav class="nav">
+    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
+    <div class="nav-links"><a href="/">Início</a></div>
+  </nav>
+
+  <main class="main-content">
+    <a href="/" class="back-link">← Voltar aos jogos</a>
+
+    <div class="game-header">
+      <h1>Tetris</h1>
+      <p>Encaixe as peças e complete linhas neste clássico puzzle.</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-score">
+        Pontos: <span id="score">000000</span>
+        &nbsp;|&nbsp;
+        Nível: <span id="level">1</span>
+      </div>
+
+      <div class="tetris-layout">
+        <div class="game-canvas-wrapper tetris-board-wrapper">
+          <canvas id="gameCanvas"></canvas>
+        </div>
+        <div class="tetris-sidebar">
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Próxima</div>
+            <canvas id="nextCanvas"></canvas>
+          </div>
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Recorde</div>
+            <div class="tetris-panel-value" id="highScore">000000</div>
+          </div>
+          <div class="tetris-panel">
+            <div class="tetris-panel-label">Linhas</div>
+            <div class="tetris-panel-value" id="lines">0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <button class="btn btn-primary" id="startBtn">Iniciar</button>
+        <button class="btn btn-secondary" id="restartBtn">Reiniciar</button>
+      </div>
+
+      <!-- Controles mobile -->
+      <div class="tetris-mobile-controls" id="mobileControls">
+        <div class="mobile-row">
+          <button class="mobile-btn" id="rotateBtn" aria-label="Rotacionar">↑</button>
+        </div>
+        <div class="mobile-row">
+          <button class="mobile-btn" id="leftBtn" aria-label="Esquerda">←</button>
+          <button class="mobile-btn mobile-btn-down" id="downBtn" aria-label="Descer">↓</button>
+          <button class="mobile-btn" id="rightBtn" aria-label="Direita">→</button>
+        </div>
+        <div class="mobile-row">
+          <button class="mobile-btn mobile-btn-drop" id="dropBtn" aria-label="Drop instantâneo">ESPAÇO</button>
+        </div>
+      </div>
+
+      <div class="game-instructions">
+        <h3>Como jogar</h3>
+        <ul>
+          <li>← → para mover, ↑ para rotacionar, ↓ para acelerar</li>
+          <li>Espaço para derrubar a peça instantaneamente</li>
+          <li>Complete linhas horizontais para pontuação</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

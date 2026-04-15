@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breakout — Mini Jogos</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <a href="/" class="back-link">← Voltar aos jogos</a>
+
+    <div class="game-header">
+      <h1>Breakout 🧱</h1>
+      <p>Destrua todos os blocos rebatendo a bola com a raquete.</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-score-row">
+        <div class="game-score">Pontos: <span id="score">000000</span></div>
+        <div class="game-lives">Vidas: <span id="lives">3</span></div>
+        <div class="game-highscore">Recorde: <span id="highscore">000000</span></div>
+      </div>
+
+      <div class="game-canvas-wrapper">
+        <canvas id="gameCanvas" aria-label="Área do jogo Breakout"></canvas>
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <div class="overlay-emoji">🧱</div>
+            <h2 id="overlayTitle">Breakout</h2>
+            <p id="overlayMsg">Destrua todos os blocos sem deixar a bola cair!</p>
+            <button class="btn btn-primary btn-lg" id="overlayBtn">Iniciar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <button class="btn btn-primary" id="startBtn">Iniciar</button>
+        <button class="btn btn-secondary" id="restartBtn">Reiniciar</button>
+      </div>
+
+      <div class="game-instructions">
+        <h3>Como jogar</h3>
+        <ul>
+          <li>Use ← → ou mova o mouse para controlar a raquete</li>
+          <li>No mobile, toque e arraste na tela</li>
+          <li>Rebata a bola para destruir os blocos coloridos</li>
+          <li>Não deixe a bola cair — você tem 3 vidas</li>
+          <li>Blocos do topo valem mais pontos!</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

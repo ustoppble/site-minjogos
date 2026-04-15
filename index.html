@@ -3,70 +3,173 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Jogos — Jogos HTML5 Grátis</title>
-  <meta name="description" content="Coleção de mini jogos HTML5 grátis para jogar no navegador. Snake, Tetris, Pong, Breakout, Flappy Bird e mais.">
+
+  <!-- SEO -->
+  <title>Mini Jogos — Jogos Gratis no Navegador</title>
+  <meta name="description" content="Colecao de mini jogos HTML5 gratuitos para jogar no navegador. Snake, Tetris, Pong, Breakout, Flappy Bird e mais 25 jogos — sem download, sem cadastro.">
+  <meta name="keywords" content="mini jogos, jogos online gratis, jogos navegador, jogos HTML5, snake, tetris, pong, campo minado, jogo da memoria">
+  <meta name="author" content="Mini Jogos">
+  <link rel="canonical" href="https://minjogos.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mini Jogos — Jogos Gratis no Navegador">
+  <meta property="og:description" content="Colecao de mini jogos HTML5 gratuitos para jogar no navegador. Snake, Tetris, Pong e mais 25 jogos — sem download, sem cadastro.">
+  <meta property="og:url" content="https://minjogos.com/">
+  <meta property="og:site_name" content="Mini Jogos">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:image" content="https://minjogos.com/assets/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mini Jogos — Jogos Gratis no Navegador">
+  <meta name="twitter:description" content="Mini jogos HTML5 gratuitos direto no navegador. Sem download, sem cadastro.">
+  <meta name="twitter:image" content="https://minjogos.com/assets/images/og-cover.png">
+
+  <!-- Favicon & PWA -->
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#7c5cff">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/design-system.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Schema.org — WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mini Jogos",
+    "url": "https://minjogos.com/",
+    "description": "Colecao de mini jogos HTML5 gratuitos para jogar no navegador.",
+    "inLanguage": "pt-BR",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://minjogos.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- Schema.org — ItemList (catalogo) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Catalogo de Mini Jogos",
+    "description": "Lista completa de mini jogos disponiveis para jogar gratis no navegador.",
+    "numberOfItems": 30,
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "url": "https://minjogos.com/games/snake/", "name": "Snake" },
+      { "@type": "ListItem", "position": 2, "url": "https://minjogos.com/games/tetris/", "name": "Tetris" },
+      { "@type": "ListItem", "position": 3, "url": "https://minjogos.com/games/pong/", "name": "Pong" },
+      { "@type": "ListItem", "position": 4, "url": "https://minjogos.com/games/breakout/", "name": "Breakout" },
+      { "@type": "ListItem", "position": 5, "url": "https://minjogos.com/games/flappy-bird/", "name": "Flappy Bird" },
+      { "@type": "ListItem", "position": 6, "url": "https://minjogos.com/games/2048/", "name": "2048" },
+      { "@type": "ListItem", "position": 7, "url": "https://minjogos.com/games/minesweeper/", "name": "Campo Minado" },
+      { "@type": "ListItem", "position": 8, "url": "https://minjogos.com/games/memory/", "name": "Jogo da Memoria" },
+      { "@type": "ListItem", "position": 9, "url": "https://minjogos.com/games/tic-tac-toe/", "name": "Jogo da Velha" },
+      { "@type": "ListItem", "position": 10, "url": "https://minjogos.com/games/space-invaders/", "name": "Space Invaders" },
+      { "@type": "ListItem", "position": 11, "url": "https://minjogos.com/games/pacman/", "name": "Pac-Man" },
+      { "@type": "ListItem", "position": 12, "url": "https://minjogos.com/games/dino-runner/", "name": "Dino Runner" },
+      { "@type": "ListItem", "position": 13, "url": "https://minjogos.com/games/sudoku/", "name": "Sudoku" },
+      { "@type": "ListItem", "position": 14, "url": "https://minjogos.com/games/connect-four/", "name": "Ligue 4" },
+      { "@type": "ListItem", "position": 15, "url": "https://minjogos.com/games/whack-a-mole/", "name": "Whack-a-Mole" },
+      { "@type": "ListItem", "position": 16, "url": "https://minjogos.com/games/frogger/", "name": "Frogger" },
+      { "@type": "ListItem", "position": 17, "url": "https://minjogos.com/games/asteroids/", "name": "Asteroids" },
+      { "@type": "ListItem", "position": 18, "url": "https://minjogos.com/games/brick-breaker/", "name": "Brick Breaker" },
+      { "@type": "ListItem", "position": 19, "url": "https://minjogos.com/games/color-match/", "name": "Color Match" },
+      { "@type": "ListItem", "position": 20, "url": "https://minjogos.com/games/simon/", "name": "Simon Says" },
+      { "@type": "ListItem", "position": 21, "url": "https://minjogos.com/games/maze/", "name": "Maze Runner" },
+      { "@type": "ListItem", "position": 22, "url": "https://minjogos.com/games/bubble-shooter/", "name": "Bubble Shooter" },
+      { "@type": "ListItem", "position": 23, "url": "https://minjogos.com/games/solitaire/", "name": "Paciencia" },
+      { "@type": "ListItem", "position": 24, "url": "https://minjogos.com/games/checkers/", "name": "Damas" },
+      { "@type": "ListItem", "position": 25, "url": "https://minjogos.com/games/tower-defense/", "name": "Tower Defense" },
+      { "@type": "ListItem", "position": 26, "url": "https://minjogos.com/games/platformer/", "name": "Platformer" },
+      { "@type": "ListItem", "position": 27, "url": "https://minjogos.com/games/racing/", "name": "Racing" },
+      { "@type": "ListItem", "position": 28, "url": "https://minjogos.com/games/puzzle-slider/", "name": "15 Puzzle" },
+      { "@type": "ListItem", "position": 29, "url": "https://minjogos.com/games/wordle/", "name": "Wordle" },
+      { "@type": "ListItem", "position": 30, "url": "https://minjogos.com/games/hangman/", "name": "Forca" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <nav class="nav">
-    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
-    <div class="nav-links">
-      <a href="/">Início</a>
+  <!-- Nav -->
+  <nav class="nav" role="navigation" aria-label="Navegacao principal">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="Mini Jogos — Pagina inicial">
+        <span class="nav-logo-icon" aria-hidden="true">&#127918;</span>
+        <span>Mini</span>Jogos
+      </a>
+      <button class="nav-menu-toggle btn-icon" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <div class="nav-links">
+        <a href="/" class="nav-link active">Jogos</a>
+        <a href="/categorias.html" class="nav-link">Categorias</a>
+        <a href="/sobre.html" class="nav-link">Sobre</a>
+      </div>
     </div>
   </nav>
 
-  <main class="main-content">
-    <section class="hero">
-      <h1>🎮 <span>Mini</span>Jogos</h1>
-      <p>Jogos clássicos HTML5 para jogar direto no navegador. Sem downloads, sem cadastro.</p>
-    </section>
+  <div class="page">
+    <main class="page-content">
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Todos os Jogos</h2>
-        <div class="games-grid">
+      <!-- Hero -->
+      <section class="hero container">
+        <h1 class="hero-title">Mini Jogos</h1>
+        <p class="hero-subtitle">Jogos classicos HTML5 para jogar direto no navegador. Sem downloads, sem cadastro.</p>
+      </section>
 
-          <a href="games/snake/" class="game-card">
-            <div class="game-card-thumb">🐍</div>
-            <h3 class="game-card-title">Snake</h3>
-            <p class="game-card-desc">Controle a cobra e colete comida sem bater nas paredes ou em si mesma.</p>
-          </a>
-
-          <a href="games/tetris/" class="game-card">
-            <div class="game-card-thumb">🧱</div>
-            <h3 class="game-card-title">Tetris</h3>
-            <p class="game-card-desc">Encaixe as peças e complete linhas neste clássico puzzle.</p>
-          </a>
-
-          <a href="games/pong/" class="game-card">
-            <div class="game-card-thumb">🏓</div>
-            <h3 class="game-card-title">Pong</h3>
-            <p class="game-card-desc">O clássico jogo de ping-pong. Derrote a CPU e marque pontos.</p>
-          </a>
-
-          <a href="games/breakout/" class="game-card">
-            <div class="game-card-thumb">🧱</div>
-            <h3 class="game-card-title">Breakout</h3>
-            <p class="game-card-desc">Destrua todos os blocos rebatendo a bola com a raquete.</p>
-          </a>
-
-          <a href="games/flappy-bird/" class="game-card">
-            <div class="game-card-thumb">🐦</div>
-            <h3 class="game-card-title">Flappy Bird</h3>
-            <p class="game-card-desc">Toque para voar e desvie dos canos neste desafio viciante.</p>
-          </a>
-
+      <!-- Busca + Filtros -->
+      <section class="container">
+        <div class="toolbar">
+          <div class="search-box">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="search" class="search-input" id="search-input" placeholder="Buscar jogos..." aria-label="Buscar jogos">
+          </div>
+          <div id="filter-tags" class="filter-tags" role="group" aria-label="Filtrar por categoria"></div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
 
-  <footer class="footer">
-    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
-  </footer>
+      <!-- Catalogo de Jogos -->
+      <section id="jogos" class="section" aria-label="Catalogo de jogos">
+        <div class="container">
+          <div class="section-header">
+            <h2 class="section-title">Todos os Jogos</h2>
+            <span class="section-count text-muted">30 jogos</span>
+          </div>
+          <div id="games-grid" class="games-grid">
+            <!-- Renderizado dinamicamente pelo main.js -->
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-inner">
+        <p class="footer-text">Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+        <nav class="footer-links" aria-label="Links do rodape">
+          <a href="/sobre.html" class="footer-link">Sobre</a>
+          <a href="/categorias.html" class="footer-link">Categorias</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

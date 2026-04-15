@@ -1,0 +1,112 @@
+/* ============================================
+   BREAKOUT — Estilos especificos
+   ============================================ */
+
+/* Linha de pontuacao com vidas */
+.game-score-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-lives {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-danger);
+}
+
+.game-highscore {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+}
+
+/* Wrapper do canvas com overlay */
+.game-canvas-wrapper {
+  position: relative;
+}
+
+/* Overlay de inicio/fim de jogo */
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 15, 35, 0.88);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.game-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.overlay-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.overlay-content h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+}
+
+.overlay-content p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  max-width: 280px;
+}
+
+.btn-lg {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-lg);
+}
+
+/* Canvas responsivo */
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  cursor: none;
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .game-score-row {
+    gap: var(--space-3);
+  }
+
+  .game-lives,
+  .game-highscore,
+  .game-score {
+    font-size: var(--font-size-base);
+  }
+
+  .overlay-emoji {
+    font-size: 2rem;
+  }
+
+  .overlay-content h2 {
+    font-size: var(--font-size-xl);
+  }
+}

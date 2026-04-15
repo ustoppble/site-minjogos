@@ -84,15 +84,9 @@ const MiniJogos = {
 function renderGameCards(games, container) {
   container.innerHTML = games.map(game => `
     <a href="games/${game.id}/index.html" class="game-card">
-      <div class="game-card-thumbnail">${game.emoji}</div>
-      <div class="game-card-body">
-        <h3 class="game-card-title">${game.name}</h3>
-        <p class="game-card-desc">${game.description}</p>
-      </div>
-      <div class="game-card-footer">
-        <span class="badge">${CATEGORIES[game.category]?.label || game.category}</span>
-        <span class="btn-ghost btn-sm">Jogar →</span>
-      </div>
+      <div class="game-card-thumb">${game.emoji}</div>
+      <h3 class="game-card-title">${game.name}</h3>
+      <p class="game-card-desc">${game.description}</p>
     </a>
   `).join('');
 }

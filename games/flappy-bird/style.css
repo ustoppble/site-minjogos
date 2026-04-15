@@ -1,0 +1,32 @@
+/* ============================================
+   FLAPPY BIRD — Estilos específicos
+   ============================================ */
+
+/* Layout portrait compacto para este jogo */
+.game-canvas-wrapper {
+  max-width: 360px;
+}
+
+/* Score row com recorde ao lado */
+.game-score-row {
+  display: flex;
+  gap: var(--space-6);
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.game-highscore {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+}
+
+/* Canvas com cursor pointer para indicar interatividade */
+#gameCanvas {
+  cursor: pointer;
+  touch-action: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}

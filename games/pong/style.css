@@ -1,0 +1,100 @@
+/* ============================================
+   PONG — Estilos específicos
+   ============================================ */
+
+.game-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 64px; /* altura da nav fixa */
+}
+
+/* Linha de placar + recorde */
+.game-score-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 500px;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.game-highscore {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.game-highscore span {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Canvas wrapper — posição relativa para overlay */
+.game-canvas-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Overlay (início / fim de jogo) */
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 15, 35, 0.88);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.game-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-6);
+}
+
+.overlay-emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.overlay-content h2 {
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+}
+
+.overlay-content p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  max-width: 260px;
+}
+
+.btn-lg {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--font-size-base);
+}
+
+/* Canvas: sem borda arredondada própria (o wrapper cuida disso) */
+#gameCanvas {
+  display: block;
+  width: 100%;
+  touch-action: none; /* evita scroll durante touch no canvas */
+  cursor: none; /* esconde cursor dentro do canvas */
+}

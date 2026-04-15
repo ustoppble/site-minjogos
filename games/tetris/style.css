@@ -1,0 +1,166 @@
+/* ============================================
+   TETRIS — Mini Jogos
+   style.css — Estilos específicos do jogo
+   ============================================ */
+
+/* Layout principal: tabuleiro + sidebar */
+.tetris-layout {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Wrapper do canvas do tabuleiro */
+.tetris-board-wrapper {
+  flex: 0 0 auto;
+  width: min(300px, 65vw);
+  max-width: 320px;
+  padding: var(--space-3);
+}
+
+/* Sidebar com next, recorde, linhas */
+.tetris-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  flex: 0 0 auto;
+  min-width: 100px;
+}
+
+.tetris-panel {
+  background-color: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tetris-panel-label {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tetris-panel-value {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+#nextCanvas {
+  display: block;
+  border-radius: var(--radius-sm);
+  background: #0a0a1a;
+}
+
+/* Controles Mobile */
+.tetris-mobile-controls {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.mobile-row {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.mobile-btn {
+  width: 56px;
+  height: 56px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast);
+  -webkit-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.mobile-btn:active {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+}
+
+.mobile-btn-down {
+  background-color: var(--color-bg-elevated);
+}
+
+.mobile-btn-drop {
+  width: auto;
+  min-width: 120px;
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.mobile-btn-drop:active {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+/* Score principal acima do tabuleiro */
+.game-score {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+  letter-spacing: 0.04em;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .tetris-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tetris-board-wrapper {
+    width: min(280px, 90vw);
+    max-width: none;
+  }
+
+  .tetris-sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .tetris-panel {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .tetris-mobile-controls {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 481px) {
+  .tetris-mobile-controls {
+    /* Controlado pelo JS (isMobile) — não sobrescrever em desktop */
+  }
+}

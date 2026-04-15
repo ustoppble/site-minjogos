@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flappy Bird — Mini Jogos</title>
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <a href="/" class="back-link">← Voltar aos jogos</a>
+
+    <div class="game-header">
+      <h1>Flappy Bird 🐦</h1>
+      <p>Toque para voar e desvie dos canos neste desafio viciante.</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-score-row">
+        <div class="game-score">Pontos: <span id="score">000000</span></div>
+        <div class="game-highscore">Recorde: <span id="highscore">000000</span></div>
+      </div>
+
+      <div class="game-canvas-wrapper">
+        <canvas id="gameCanvas" aria-label="Área do jogo Flappy Bird"></canvas>
+      </div>
+
+      <div class="game-controls">
+        <button class="btn btn-primary" id="startBtn">Iniciar</button>
+        <button class="btn btn-secondary" id="restartBtn">Reiniciar</button>
+      </div>
+
+      <div class="game-instructions">
+        <h3>Como jogar</h3>
+        <ul>
+          <li>Clique, toque ou pressione Espaço para voar</li>
+          <li>Passe entre os canos sem encostar</li>
+          <li>Cada par de canos passado vale 1 ponto</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
