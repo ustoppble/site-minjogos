@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asteroids — Mini Jogos</title>
+  <meta name="description" content="Pilote sua nave e destrua os asteroides antes que te destruam! Jogue gratis no navegador, sem download e sem cadastro.">
+  <meta name="keywords" content="Asteroids, mini jogos, jogar online gratis, jogo navegador, jogo HTML5">
+  <link rel="canonical" href="https://minjogos.com/games/asteroids/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Asteroids — Mini Jogos">
+  <meta property="og:description" content="Pilote sua nave e destrua os asteroides antes que te destruam!">
+  <meta property="og:url" content="https://minjogos.com/games/asteroids/">
+  <meta property="og:site_name" content="Mini Jogos">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#3ECF8E">
+  <link rel="stylesheet" href="../../css/design-system.css">
+  <link rel="stylesheet" href="../../css/components.css">
+  <link rel="stylesheet" href="../../css/layout.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="game-page">
+
+  <nav class="nav">
+    <a href="/" class="nav-logo">🎮 <span>Mini</span>Jogos</a>
+    <div class="nav-links">
+      <a href="/">Início</a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <a href="/" class="back-link">← Voltar aos jogos</a>
+
+    <div class="game-header">
+      <h1>Asteroids ☄️</h1>
+      <p>Pilote sua nave e destrua os asteroides antes que te destruam!</p>
+    </div>
+
+    <div class="game-container">
+      <div class="game-score-row">
+        <div class="game-score">Pontos: <span id="score">000000</span></div>
+        <div class="game-lives">Vidas: <span id="lives">3</span></div>
+        <div class="game-highscore">Recorde: <span id="highscore">000000</span></div>
+      </div>
+
+      <div class="game-canvas-wrapper">
+        <canvas id="gameCanvas" aria-label="Área do jogo Asteroids"></canvas>
+        <div class="game-overlay" id="gameOverlay">
+          <div class="overlay-content">
+            <div class="overlay-emoji">☄️</div>
+            <h2 id="overlayTitle">Asteroids</h2>
+            <p id="overlayMsg">Destrua os asteroides antes que te destruam!</p>
+            <button class="btn btn-primary btn-lg" id="overlayBtn">Iniciar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="touch-controls" id="touchControls">
+        <div class="touch-row">
+          <button class="touch-btn" id="touchLeft" aria-label="Girar à esquerda">&#9668;</button>
+          <button class="touch-btn touch-btn-thrust" id="touchThrust" aria-label="Acelerar">&#9650;</button>
+          <button class="touch-btn" id="touchRight" aria-label="Girar à direita">&#9658;</button>
+        </div>
+        <div class="touch-row">
+          <button class="touch-btn touch-btn-fire" id="touchFire" aria-label="Atirar">&#9679; FOGO</button>
+        </div>
+      </div>
+
+      <div class="game-controls">
+        <button class="btn btn-primary" id="startBtn">Iniciar</button>
+        <button class="btn btn-secondary" id="restartBtn">Reiniciar</button>
+      </div>
+
+      <div class="game-instructions">
+        <h3>Como jogar</h3>
+        <ul>
+          <li>Setas ◄ ► para girar a nave, ▲ para acelerar, Espaço para atirar</li>
+          <li>Asteroides grandes se dividem em médios, médios em pequenos</li>
+          <li>Você tem 3 vidas — desvie dos fragmentos e sobreviva!</li>
+          <li>No mobile: use os controles na tela</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Mini Jogos — Feito com HTML5, CSS e JavaScript puro.</p>
+  </footer>
+
+  <script src="../../js/main.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

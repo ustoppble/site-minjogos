@@ -1,0 +1,169 @@
+/* ============================================
+   ASTEROIDS — Estilos especificos
+   ============================================ */
+
+.game-score-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.game-lives {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-accent);
+}
+
+.game-highscore {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-muted);
+}
+
+.game-canvas-wrapper {
+  position: relative;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 15, 35, 0.9);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.game-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.overlay-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.overlay-content h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+}
+
+.overlay-content p {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  max-width: 280px;
+}
+
+.btn-lg {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-lg);
+}
+
+#gameCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  cursor: crosshair;
+}
+
+/* Touch controls */
+.touch-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.touch-row {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.touch-btn {
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  cursor: pointer;
+  touch-action: none;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.touch-btn:active,
+.touch-btn.pressed {
+  background: var(--color-bg-hover);
+  transform: scale(0.94);
+}
+
+.touch-btn-thrust {
+  background: color-mix(in srgb, var(--color-accent) 12%, var(--color-surface));
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.touch-btn-fire {
+  width: 10rem;
+  height: 3.5rem;
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  background: color-mix(in srgb, var(--color-danger) 12%, var(--color-surface));
+  border-color: var(--color-danger);
+  color: var(--color-danger);
+  letter-spacing: 0.05em;
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .game-score-row {
+    gap: var(--space-3);
+  }
+
+  .game-lives,
+  .game-highscore,
+  .game-score {
+    font-size: var(--font-size-base);
+  }
+
+  .overlay-emoji {
+    font-size: 2rem;
+  }
+
+  .overlay-content h2 {
+    font-size: var(--font-size-xl);
+  }
+
+  .touch-btn {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
