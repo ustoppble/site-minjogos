@@ -1,0 +1,6 @@
+/* Estilos especificos do Whack-a-Mole */
+
+#gameCanvas {
+  cursor: crosshair;
+  touch-action: none;
+}
