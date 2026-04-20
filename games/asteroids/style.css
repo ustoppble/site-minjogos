@@ -1,0 +1,62 @@
+/* Estilos especificos do jogo Asteroids */
+
+.lives-display {
+  font-size: var(--font-size-base);
+  letter-spacing: 0.1em;
+}
+
+/* Controles de toque — visiveis apenas em dispositivos sem mouse preciso */
+.touch-controls-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  margin-top: var(--space-2);
+}
+
+.touch-group {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.touch-btn {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border-strong);
+  color: var(--color-text);
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.touch-btn:active {
+  background: var(--color-bg-hover);
+  border-color: var(--color-border-hover);
+}
+
+.touch-btn.touch-thrust {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent);
+}
+
+.touch-btn.touch-fire {
+  background: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Esconder em telas com mouse (pointer fino = desktop) */
+@media (pointer: fine) {
+  .touch-controls-bar {
+    display: none;
+  }
+}
