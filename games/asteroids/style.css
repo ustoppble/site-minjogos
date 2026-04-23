@@ -1,0 +1,109 @@
+/* ============================================
+   ASTEROIDS — Estilos específicos do jogo
+   ============================================ */
+
+/* Score secundário (recorde) */
+.score-display--secondary {
+  color: var(--color-warning);
+}
+
+/* Overlay */
+.game-canvas-wrapper {
+  position: relative;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(5, 5, 18, 0.88);
+  border-radius: var(--radius-md);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-base);
+}
+
+.game-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.overlay-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.overlay-title {
+  font-size: var(--font-size-2xl);
+  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+}
+
+.overlay-msg {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  max-width: 28ch;
+}
+
+.btn-lg {
+  padding: var(--space-3) var(--space-8);
+  font-size: var(--font-size-base);
+}
+
+/* Mobile touch controls */
+.touch-controls {
+  display: none;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+  align-items: center;
+}
+
+@media (pointer: coarse) {
+  .touch-controls {
+    display: grid;
+  }
+}
+
+.touch-btn {
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 1.4rem;
+  padding: var(--space-4) 0;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+  min-height: 3.5rem;
+}
+
+.touch-btn:active,
+.touch-btn.pressed {
+  background: var(--color-surface-overlay);
+  border-color: var(--color-primary);
+}
+
+.touch-btn--thrust {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.touch-btn--fire {
+  color: var(--color-success);
+  border-color: var(--color-success);
+  min-width: 3.5rem;
+}
